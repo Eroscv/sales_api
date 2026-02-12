@@ -3,7 +3,7 @@
 API backend desenvolvida em **Python + FastAPI** para ingestão, armazenamento e consulta de dados de vendas, utilizando **SQLite** para dados estruturados e **MongoDB** para textos associados às vendas.
 
 Este projeto atende aos requisitos do desafio técnico, incluindo CRUD completo, busca textual, agregações analíticas e documentação clara.
-
+⚠️ IMPORTANTE: Este projeto é configurado para EXECUÇÃO LOCAL
 ---
 
 ## 📌 Visão Geral da Solução
