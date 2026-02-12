@@ -1,0 +1,140 @@
+{
+  "info": {
+    "name": "Sales API - Updated",
+    "_postman_id": "sales-api-updated",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Sale",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/sales/",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8000",
+          "path": [
+            "sales"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"product_name\": \"Notebook\", \"category\": \"Eletr\\u00f4nicos\", \"quantity\": 2, \"unit_price\": 3500, \"sale_date\": \"2024-01-01\"}"
+        }
+      }
+    },
+    {
+      "name": "List Sales",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:8000/sales/",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8000",
+          "path": [
+            "sales"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Text",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/texts/",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8000",
+          "path": [
+            "texts"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sale_id\": 1, \"text\": \"Cliente elogiou o atendimento\"}"
+        }
+      }
+    },
+    {
+      "name": "Search Text",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:8000/texts/search?query=elogio",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8000",
+          "path": [
+            "texts",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "query",
+              "value": "elogio"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Sales With Texts",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:8000/analytics/sales-with-texts",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8000",
+          "path": [
+            "analytics",
+            "sales-with-texts"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Search Sales By Text",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:8000/analytics/search-sales?query=elogio",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8000",
+          "path": [
+            "analytics",
+            "search-sales"
+          ],
+          "query": [
+            {
+              "key": "query",
+              "value": "elogio"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
